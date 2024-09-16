@@ -15,8 +15,8 @@ const UploadFile = () => {
     formData.append('file', file);
 
     try {
-      const res = await axios.post('http://localhost:5000/upload', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
+      const res = await axios.post('https://file-transfer-app-s6sb.onrender.com/upload', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
       });
       setCode(res.data.code); // Display the generated code
     } catch (error) {

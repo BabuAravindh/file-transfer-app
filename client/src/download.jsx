@@ -7,7 +7,7 @@ const DownloadFile = () => {
 
   const handleDownload = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/download/${code}`, {
+      const res = await axios.get(`https://file-transfer-app-s6sb.onrender.com/download/${code}`, {
         responseType: 'blob', // Ensure binary data is handled properly
       });
       const url = window.URL.createObjectURL(new Blob([res.data]));
